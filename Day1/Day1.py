@@ -1,5 +1,6 @@
 import string
 import re
+from typing import List, Union
 
 alphabet = string.ascii_lowercase
 replace_dict = {
@@ -34,7 +35,7 @@ def _line_to_num(input_string: str) -> int:
     return output_num
 
 
-def _find_num_strings(input_string: str) -> str:
+def _find_num_strings(input_string: str) -> List[List[Union[int, str]]]:
     TupleList = []
 
     for key in replace_dict:
