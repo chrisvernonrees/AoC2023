@@ -36,14 +36,14 @@ def _line_to_num(input_string: str) -> int:
 
 
 def _find_num_strings(input_string: str) -> List[List[Union[int, str]]]:
-    TupleList = []
+    tuple_list = []
 
     for key in replace_dict:
         positions = [m.start() for m in re.finditer(replace_dict[key], input_string)]
         for position in positions:
-            TupleList.append([position, key])
+            tuple_list.append([position, key])
 
-    return TupleList
+    return tuple_list
 
 
 def _replacer(input_string: str, position: int, new_char: str) -> str:
