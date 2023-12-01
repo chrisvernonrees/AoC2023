@@ -40,7 +40,6 @@ def _find_num_strings(input_string: str) -> List[List[Union[int, str]]]:
 
     for key in replace_dict:
         positions = [m.start() for m in re.finditer(replace_dict[key], input_string)]
-
         for position in positions:
             TupleList.append([position, key])
 
@@ -54,9 +53,7 @@ def _replacer(input_string: str, position: int, new_char: str) -> str:
 
 def _replace_nums(input_string: str) -> str:
     update_list = _find_num_strings(input_string)
-    for i in range(len(update_list)):
-        pair = update_list[i]
-
+    for pair in update_list:
         input_string = _replacer(input_string, pair[0], pair[1])
 
     return input_string
