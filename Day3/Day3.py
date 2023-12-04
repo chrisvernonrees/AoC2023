@@ -48,31 +48,9 @@ def _get_neigbours(row, col):
                 row + 1, col], [row + 1, col + 1]]
 
 
-def _get_symbol_adj() -> List:
-    symbol_adj = []
-
-    for row in range(row_size):
-        for col in range(col_size):
-            if input_mat[row, col] != '.' and input_mat[row, col] not in num_list:
-                symbol_adj += (_get_neigbours(row, col))
-
-    return symbol_adj
-
-
 num_dict = _get_num_dict()
-symbol_adj = _get_symbol_adj()
 
-count = 0
-
-for index in num_dict:
-    num = num_dict[index][0]
-    coords = num_dict[index][1]
-
-    if any(x in symbol_adj for x in coords):
-        count += num
-
-print("Part 1:", count)
-
+part1_count = 0
 part2_count = 0
 
 for row in range(row_size):
@@ -85,9 +63,11 @@ for row in range(row_size):
                 num = num_dict[index][0]
                 coords = num_dict[index][1]
                 if any(x in neighbours for x in coords):
+                    part1_count += num
                     nums.append(num)
 
             if len(nums) == 2:
                 part2_count += nums[0] * nums[1]
 
+print("Part 1:", part1_count)
 print("Part 2:", part2_count)
