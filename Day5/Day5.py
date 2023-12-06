@@ -47,7 +47,7 @@ for key in mapping_dict:
     maps = mapping_dict[key]
     seeds1 = _map_seeds(maps, seeds1)
 
-print("Part 1:", min(seeds1))
+print("Day 5 Part 1:", min(seeds1))
 
 """Part 2"""
 
@@ -102,7 +102,7 @@ for key in mapping_dict:
     maps = mapping_dict[key]
     seed_ranges = _apply_a_step(maps, seed_ranges)
 
-print("Part 2:", min([r[0] for r in seed_ranges]))
+print("Day 5 Part 2:", min([r[0] for r in seed_ranges]))
 
 t1 = time.time()
 

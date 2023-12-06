@@ -52,5 +52,5 @@ with open("inputDay2.txt", "r") as f:
         count_2 += _get_min_power(games)
         game_num += 1
 
-print("Part 1:", count)
-print("Part 2:", count_2)
+print("Day 2 Part 1:", count)
+print("Day 2 Part 2:", count_2)

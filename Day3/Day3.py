@@ -69,5 +69,5 @@ for row in range(row_size):
             if len(nums) == 2:
                 part2_count += nums[0] * nums[1]
 
-print("Part 1:", part1_count)
-print("Part 2:", part2_count)
+print("Day 3 Part 1:", part1_count)
+print("Day 3 Part 2:", part2_count)

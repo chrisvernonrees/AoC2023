@@ -48,5 +48,5 @@ with open("inputDay4.txt", "r") as f:
 
         card_num += 1
 
-    print("Part 1:", count)
-    print("Part 2:", sum(card_dict.values()))
+    print(" Day 4 Part 1:", count)
+    print("Day 4 Part 2:", sum(card_dict.values()))

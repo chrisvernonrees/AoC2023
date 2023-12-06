@@ -69,5 +69,5 @@ with open("inputDay1.txt", "r") as f:
         new_line = _replace_nums(line.rstrip())
         part2_count += _line_to_num(new_line)
 
-print("Part 1:", part1_count)
-print("Part 2:", part2_count)
+print("Day 1 Part 1:", part1_count)
+print("Day 1 Part 2:", part2_count)
